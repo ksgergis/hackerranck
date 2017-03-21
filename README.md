@@ -1,1 +1,1 @@
-Pushing my solutions to hackerranck.
+Pushing my solutions to hackerranck
