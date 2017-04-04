@@ -1,3 +1,4 @@
+question link: https://www.hackerrank.com/challenges/what-type-of-triangle
 select  
     (CASE 
         WHEN a=b and a=c THEN 'Equilateral'
