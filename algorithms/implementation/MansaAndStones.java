@@ -1,11 +1,11 @@
-//question link https://www.hackerrank.com/challenges/manasa-and-stones
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Solution {
-	static HashMap<Integer, HashMap<Integer, Boolean>> numbersMap;
+	static HashMap<Integer, HashSet<Integer>> numbersMap;
 	public static Set<Integer> possibleNumbers;
 
 	public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class Solution {
 
 	private static void calcPossibleNumbers(int currentStone, int currentNumber, int numberOfStones, int a, int b) {
 		if (numbersMap.containsKey(currentStone)) {
-			if (numbersMap.get(currentStone).containsKey(currentNumber)) {
+			if (numbersMap.get(currentStone).contains(currentNumber)) {
 				return;
 			}
 		}
@@ -37,8 +37,8 @@ public class Solution {
 		}
 		calcPossibleNumbers(currentStone + 1, currentNumber + a, numberOfStones, a, b);
 		calcPossibleNumbers(currentStone + 1, currentNumber + b, numberOfStones, a, b);
-		HashMap<Integer, Boolean> calculatedStones = numbersMap.getOrDefault(currentStone, new HashMap<>());
-		calculatedStones.put(currentNumber, true);
+		HashSet<Integer> calculatedStones = numbersMap.getOrDefault(currentStone, new HashSet<>());
+		calculatedStones.add(currentNumber);
 		numbersMap.put(currentStone, calculatedStones);
 
 	}
