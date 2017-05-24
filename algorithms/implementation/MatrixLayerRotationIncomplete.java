@@ -3,7 +3,6 @@ import java.util.Collections;
 import java.util.Scanner;
 
 //not finished yet
-
 public class Solution {
 
 	public static void main(String[] args) {
