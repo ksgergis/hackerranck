@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 // The part of the program involving reading from STDIN and writing to STDOUT has been provided by us.
-
 public class Solution {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
